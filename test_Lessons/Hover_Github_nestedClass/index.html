@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hover Effects Example</title>
     <style>
-      /* Page Layout */
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 50px;
-      }
       /* Button Hover */
       .hover-button {
         background-color: #3498db;
@@ -23,20 +14,24 @@
         font-size: 18px;
         border-radius: 8px;
         cursor: pointer;
-        transition: background-color, padding 0.3s;
+        transition: background-color 0.3s;
       }
+
       .hover-button:hover {
-        background-color: #1f628f;
+        background-color: #2980b9;
       }
+
       /* Image Hover */
       .hover-image {
         width: 300px;
         border-radius: 10px;
         transition: transform 0.3s;
       }
+
       .hover-image:hover {
         transform: scale(1.1);
       }
+
       /* Card Hover */
       .hover-card {
         background-color: #f4f4f9;
@@ -44,39 +39,35 @@
         border-radius: 10px;
         padding: 20px;
         text-align: center;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: box-shadow 0.3s;
       }
+
       .hover-card:hover {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
       }
+
       /* Link Hover */
       .hover-link {
-        position: relative;
         color: #3498db;
         text-decoration: none;
         transition: color 0.3s;
       }
-      .hover-link .popover-container {
-        display: none;
-        position: absolute;
-        bottom: 100%;
-        right: 0px;
-        z-index: 2;
-      }
-      .hover-link .popover-container img {
-        width: 300px;
-        max-width: 300px;
-        border-radius: 8px;
-      }
-      /* .hover-link:hover {
+
+      .hover-link:hover {
         color: #2980b9;
         text-decoration: underline;
-      } */
-      .hover-link:hover .popover-container {
-        display: block;
       }
 
+      /* Page Layout */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 50px;
+      }
     </style>
   </head>
   <body>
@@ -88,7 +79,7 @@
     <!-- Image Hover -->
     <img
       class="hover-image"
-      src="../1. HTML//poster_image.png"
+      src="https://via.placeholder.com/300"
       alt="Hover Image"
     />
 
@@ -99,15 +90,6 @@
     </div>
 
     <!-- Link Hover -->
-    <a href="https://www.google.com" target="_blank" class="hover-link">
-      Hover over this link!
-      <div class="popover-container">
-        <img src="./google.png" alt="google" />
-      </div>
-    </a>
-
-    <!-- <h1>Popover Example</h1> -->
-
-    <!-- Popover Trigger -->
+    <a href="#" class="hover-link">Hover over this link!</a>
   </body>
 </html>
