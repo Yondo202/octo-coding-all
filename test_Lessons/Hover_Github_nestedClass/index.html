@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Effects Example</title>
+    <style>
+      /* Page Layout */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 50px;
+      }
+      /* Button Hover */
+      .hover-button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color, padding 0.3s;
+      }
+      .hover-button:hover {
+        background-color: #1f628f;
+      }
+      /* Image Hover */
+      .hover-image {
+        width: 300px;
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+      .hover-image:hover {
+        transform: scale(1.1);
+      }
+      /* Card Hover */
+      .hover-card {
+        background-color: #f4f4f9;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+        transition: box-shadow 0.3s;
+      }
+      .hover-card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+      /* Link Hover */
+      .hover-link {
+        position: relative;
+        color: #3498db;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .hover-link .popover-container {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        right: 0px;
+        z-index: 2;
+      }
+      .hover-link .popover-container img {
+        width: 300px;
+        max-width: 300px;
+        border-radius: 8px;
+      }
+      /* .hover-link:hover {
+        color: #2980b9;
+        text-decoration: underline;
+      } */
+      .hover-link:hover .popover-container {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Hover Effects Example</h1>
+
+    <!-- Button Hover -->
+    <button class="hover-button">Hover Me!</button>
+
+    <!-- Image Hover -->
+    <img
+      class="hover-image"
+      src="../1. HTML//poster_image.png"
+      alt="Hover Image"
+    />
+
+    <!-- Card Hover -->
+    <div class="hover-card">
+      <h2>Hover Card</h2>
+      <p>Hover over this card to see the shadow effect!</p>
+    </div>
+
+    <!-- Link Hover -->
+    <a href="https://www.google.com" target="_blank" class="hover-link">
+      Hover over this link!
+      <div class="popover-container">
+        <img src="./google.png" alt="google" />
+      </div>
+    </a>
+
+    <!-- <h1>Popover Example</h1> -->
+
+    <!-- Popover Trigger -->
+  </body>
+</html>
